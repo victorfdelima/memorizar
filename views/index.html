@@ -131,10 +131,10 @@ function updatePessoa(id) {
                     </button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    Esse projeto é apenas uma agenda para memorizar funções, métodos e libs dos Cursos de NodeJS
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
                 </div>
             </div>
         </div>
@@ -142,4 +142,8 @@ function updatePessoa(id) {
 </body>
 
 </html>
-<script>alert('Apenas um alerta')</script>
+<script>
+    $(window).on('load', function () {
+        $('#modalPadrao').modal('show');
+    });
+</script>

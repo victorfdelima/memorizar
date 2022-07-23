@@ -1,3 +1,3 @@
 $(window).on('load', function () {
-    $('#modalPadrao').modal('show');
+    $('#exampleModalLabel').modal('show');
 });
