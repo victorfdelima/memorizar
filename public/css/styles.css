@@ -1,0 +1,35 @@
+.titulos {
+    text-align: center;
+}
+
+.criarPessoa {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    background-color: aqua;
+    padding: 3em;
+    width: fit-content;
+    border-radius: 1em;
+    margin-top: 20px;
+    transition: 0.3s;
+    font-weight: bold;
+
+
+}
+
+.criarPessoa:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    background-color: aqua;
+    padding: 3em;
+    width: fit-content;
+    border-radius: 1em;
+    margin-top: 20px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.criarPessoa1 {
+    background-color: aqua;
+    border: none;
+    font-weight: bold;
+}
