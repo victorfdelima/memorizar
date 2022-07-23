@@ -1,0 +1,2 @@
+# memorizar
+ Codigos para memorizar
