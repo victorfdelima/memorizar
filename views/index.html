@@ -120,6 +120,21 @@ function updatePessoa(id) {
             </p>
         </details>
     </div>
+
+    <div class="criarPessoa">
+        <details>
+            <summary class="titulos">
+                Método para criar models
+            </summary>
+            <p>
+            <pre class="criarPessoa1">
+<code>
+npx sequelize-cli model:generate --name Pessoa --attributes nome:string,sobrenome:string,email:string,cpf:string,telefone:string;
+</code>
+            </pre>
+            </p>
+        </details>
+    </div>
     <!--Comentário do modal-->
     <div class="modal fade" id="modalPadrao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
