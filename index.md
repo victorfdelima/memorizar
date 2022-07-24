@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+## Bem vindo ao Memorizar
 
-You can use the [editor on GitHub](https://github.com/victorfdelima/memorizar/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+O Memorizar é uma pequena ideia para devs juniors, plenos e até Senior lembrarem de métodos, libs e funções usando NodeJS.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Divirta-se!
+### About
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/victorfdelima/memorizar/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Meu nome é Victor Ferreira de Lima, sou desenvolvedor apaixonado por C# .Net, porém estou em um relacionamento sério com o NodeJS e React.
+Para ver meu LinkedIn é só  >> (https://linkedin.com/in/victorferreiradelima).
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Se você quiser contribuir com esse repositório, é só me avisar através do meu e-mail: contato@victorferreira.dev.br
+
+
+### Como instalar
+
+```markdown
+1. Instale o NodejS
+2. Clone o Repositório
+3. npm i no terminal para instalar as dependêcias
+4. npm start para iniciar o projeto
