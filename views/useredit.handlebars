@@ -1,0 +1,27 @@
+<h1>Editar {{tips.title}}</h1>
+<form action="/tips/update" method="POST" class="form">
+    <input type="hidden" name="id" value="{{tips.id}}">
+    <div class="form-control">
+        <label for="title">Titulo</label>
+        <input type="text" name="title" placeholder="Edite o Título" value="{{tips.title}}">
+    </div>
+    <div class="form-control">
+        <label for="description">Código</label>
+        <input type="text" name="description" placeholder="Digite o código" value="{{tips.description}}">
+    </div>
+    <div class="form-control">
+        <label for="dica">Dica</label>
+        <input type="text" name="dica" placeholder="Dica" value="{{tips.dica}}">
+    </div>
+    <div class="form-control">
+        <label for="description">Autor</label>
+        <input type="text" name="author" placeholder="Seu nome" value="{{tips.author}}">
+    </div>
+    <input type="submit" value="Editar">
+</form>
+<form action="/address/delete/" method="POST">
+    <input type="hidden" name="title" id="{{this.title}}">
+    <input type="hidden" name="id" value="{{this.id}}" class="delete-btn">
+    <input type="submit" value="Excluir">
+</form>
+</div>
