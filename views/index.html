@@ -44,29 +44,42 @@
                 <div class="criarPessoa">
                     <details>
                         <summary class="titulos">
-                            Função de inserir dados no banco
+                            Inserir a pasta views (html) nas rotas
                         </summary>
                         <p>
                         <pre class="criarPessoa1">
     <code>
-    function criarPessoa() {
-    const pessoas = [
-    {},
-    {}
-    ]
-    Pessoa.bulkCreate(pessoas).then(Pessoa => console.log(Pessoa))
-    }
-    criarPessoa();
+        app.get('/', function (req, res) {
+            res.sendFile(path.join(__dirname + '/views/index.html'));
+            //__dirname : Isso vai resolver o diretório do seu projeto.
+        });
     </code>
                 </pre>
                         </p>
-                        <span class="criarPessoa1">Usa-se o método bulkCreate para criar de uma vez vários objetos e
-                            enviar
-                            para o
-                            banco</span>
+                    </details>
+
+                </div>
+                <div class="criarPessoa">
+                    <details>
+                        <summary class="titulos">
+                            Inserir css e javascript no index.js
+                        </summary>
+                        <p>
+                        <pre class="criarPessoa1">
+    <code>
+        app.use(express.static(__dirname + '/public'));
+
+    </code>
+                </pre>
+                        </p>
+                        <span class="criarPessoa1">Setar pasta public para inserir css e javascript
+                        </span>
                     </details>
                 </div>
+
             </div>
+
+            <!-- Coluna da Esquerda -->
 
             <div class="col-sm-6">
                 <div class="criarPessoa">
@@ -108,6 +121,26 @@
             }
         }).then(Pessoa => console.log(Pessoa))
     }
+    </code>
+                </pre>
+                        </p>
+                    </details>
+
+                </div>
+                <div class="criarPessoa">
+                    <details>
+                        <summary class="titulos">
+                            Fazer conexão da aplicação e banco
+                        </summary>
+                        <p>
+                        <pre class="criarPessoa1">
+    <code>
+        conn.
+        sync()
+        //sync({ force: true })
+        .then(() => {
+            app.listen(port);
+        }).catch((err) => console.log(err))
     </code>
                 </pre>
                         </p>
