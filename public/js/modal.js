@@ -1,8 +1,3 @@
-$(window).on('load', function () {
-    localStorage.setItem("modal", true);
-    $('#modalPadrao').modal('show');
-});
-
 $('.close').click(function (event) {
     $('#modalPadrao').fadeOut();
     event.preventDefault();
