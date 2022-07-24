@@ -33,3 +33,259 @@
     border: none;
     font-weight: bold;
 }
+
+@media (prefers-color-scheme: dark) {
+    .day.dark-scheme {
+        background-color: #333;
+        color: white;
+    }
+
+    .night.dark-scheme {
+        background-color: black;
+        color: #ddd;
+    }
+}
+
+* {
+    text-align: center;
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --dur: 0.3s;
+    font-size: calc(40px + (80 - 40)*(100vw - 320px)/(2560 - 320));
+}
+
+body,
+input {
+    color: hsl(0, 0%, 10%);
+    font: 1em/1.5 sans-serif;
+}
+
+form,
+.toggle:before,
+.toggle:after {
+    background: hsl(0, 0%, 90%);
+}
+
+form,
+.toggle {
+    position: relative;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.curtain,
+.sr,
+.toggle:before,
+.toggle:after {
+    position: absolute;
+}
+
+.curtain,
+.toggle:before,
+.toggle:after {
+    transition: transform var(--dur);
+}
+
+.curtain,
+.toggle:before,
+.toggle:checked:after {
+    transition-timing-function: ease-out;
+}
+
+.curtain,
+.sr {
+    top: 0;
+    left: 0;
+}
+
+.curtain {
+    background: hsl(0, 0%, 100%);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+}
+
+.sr,
+.toggle {
+    overflow: hidden;
+}
+
+.sr {
+    clip: rect(1px, 1px, 1px, 1px);
+    color: transparent;
+    width: 1px;
+    height: 1px;
+}
+
+.toggle {
+    background: currentColor;
+    border-radius: 0.75em;
+    cursor: pointer;
+    width: 3em;
+    height: 1.5em;
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.toggle:before,
+.toggle:after {
+    border-radius: 50%;
+    content: "";
+    display: block;
+    top: 0.25em;
+    left: 0.25em;
+    width: 1em;
+    height: 1em;
+}
+
+.toggle:before,
+.toggle:checked:after {
+    transition-delay: 0s;
+}
+
+.toggle:checked:before,
+.toggle:after {
+    transition-delay: calc(var(--dur) * 0.75);
+    transition-timing-function: cubic-bezier(0.3, 1.6, 0.5, 0.7);
+}
+
+.toggle:before {
+    transform: translateX(-1.5em);
+}
+
+.toggle:checked:before {
+    transform: translateX(1.5em);
+}
+
+.toggle:checked:after {
+    transform: translateX(3em);
+}
+
+.toggle:checked~.curtain {
+    transform: scaleX(1);
+}
+
+.toggle:focus {
+    outline: transparent;
+}
+
+/* Estilo iOS  Botão NIGHT MODE*/
+.switch__container {
+    margin: 30px auto;
+    width: 120px;
+}
+
+.switch {
+    visibility: hidden;
+    position: absolute;
+    margin-left: -9999px;
+}
+
+.switch+label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+.switch--shadow+label {
+    padding: 2px;
+    width: 120px;
+    height: 60px;
+    background-color: #dddddd;
+    border-radius: 60px;
+}
+
+.switch--shadow+label:before,
+.switch--shadow+label:after {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    bottom: 1px;
+    content: "";
+}
+
+.switch--shadow+label:before {
+    right: 1px;
+    background-color: #f1f1f1;
+    border-radius: 60px;
+    transition: background 0.4s;
+}
+
+.switch--shadow+label:after {
+    width: 62px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s;
+}
+
+.switch--shadow:checked+label:before {
+    background-color: #8ce196;
+}
+
+.switch--shadow:checked+label:after {
+    transform: translateX(60px);
+}
+
+/* Estilo Flat */
+.switch--flat+label {
+    padding: 2px;
+    width: 120px;
+    height: 60px;
+    background-color: #dddddd;
+    border-radius: 60px;
+    transition: background 0.4s;
+}
+
+.switch--flat+label:before,
+.switch--flat+label:after {
+    display: block;
+    position: absolute;
+    content: "";
+}
+
+.switch--flat+label:before {
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    right: 2px;
+    background-color: #fff;
+    border-radius: 60px;
+    transition: background 0.4s;
+}
+
+.switch--flat+label:after {
+    top: 4px;
+    left: 4px;
+    bottom: 4px;
+    width: 56px;
+    background-color: #dddddd;
+    border-radius: 52px;
+    transition: margin 0.4s, background 0.4s;
+}
+
+.switch--flat:checked+label {
+    background-color: #8ce196;
+}
+
+.switch--flat:checked+label:after {
+    margin-left: 60px;
+    background-color: #8ce196;
+}
