@@ -15,173 +15,126 @@
 </head>
 
 <body>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="criarPessoa">
-                <details>
-                    <summary class="titulos">
-                        Criar conexão com banco de dados
-                    </summary>
-                    <p>
-                    <pre class="criarPessoa1">
-<code>
-const { Sequelize } = require('sequelize')
-
-const sequelize = new Sequelize('nomedobanco', 'root', 'password', {
-    host: 'localhost',
-    dialect: 'mysql', 
-})
-
-
-module.exports = sequelize
-</code>
-            </pre>
-                    </p>
-                    <span>Dialect é a propriedade para usar o tipo de banco se é Mysql, mongodb ou outros</span>
-                </details>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="criarPessoa">
-            <details>
-                <summary class="titulos">
-                    Função de inserir dados no banco
-                </summary>
-                <p>
-                <pre class="criarPessoa1">
-<code>
-function criarPessoa() {
-const pessoas = [
-{
-    nome: 'Victor',
-    sobrenome: 'Ferreira',
-    email: 'contato@victorferreira.dev.br',
-    cpf: '113.123.123-39',
-    telefone: '(31) 99106-0445',
-    rg: '129837-PCMG'
-},
-{
-    nome: 'Victor',
-    sobrenome: 'Ferreira',
-    email: 'contato@victorferreira.dev.br',
-    cpf: '113.123.123-39',
-    telefone: '(31) 99106-0445',
-    rg: '129837-PCMG'
-}
-]
-Pessoa.bulkCreate(pessoas).then(Pessoa => console.log(Pessoa))
-}
-criarPessoa();
-</code>
-            </pre>
-                </p>
-                <span class="criarPessoa1">Usa-se o método bulkCreate para criar de uma vez vários objetos e enviar
-                    para o
-                    banco</span>
-            </details>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="criarPessoa">
-            <details>
-                <summary class="titulos">
-                    Função de Deletar dados no banco
-                </summary>
-                <p>
-                <pre class="criarPessoa1">
-<code>
-function deletePessoa(id) {
-    Pessoa.destroy({
-        where: {
-            id: id
-        }
-    }).then(Pessoa => console.log(Pessoa))
-}
-// deletePessoa(8);
-</code>
-            </pre>
-                </p>
-            </details>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="criarPessoa">
-            <details>
-                <summary class="titulos">
-                    Função de atualizar dados no banco
-                </summary>
-                <p>
-                <pre class="criarPessoa1">
-<code>
-function updatePessoa(id) {
-    Pessoa.update({
-        nome: 'Victor'
-    }, {
-        where: {
-            id: id
-        }
-    }).then(Pessoa => console.log(Pessoa))
-}
-</code>
-            </pre>
-                </p>
-            </details>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="criarPessoa">
-            <details>
-                <summary class="titulos">
-                    Método para criar models
-                </summary>
-                <p>
-                <pre class="criarPessoa1">
-<code>
-npx sequelize-cli model:generate --name Pessoa --attributes nome:string,sobrenome:string,email:string,cpf:string,telefone:string;
-</code>
-            </pre>
-                </p>
-            </details>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="criarPessoa">
-            <details>
-                <summary class="titulos">
-                    Método para setar a pasta public
-                </summary>
-                <p>
-                <pre class="criarPessoa1">
-<code>
-app.use(express.static('public'));
-</code>
-            </pre>
-                </p>
-                Esse método seta arquivos como css e javascript para usar no index.html ou diversos
-            </details>
-        </div>
-    </div>
-    <!--Comentário do modal-->
-    <div class="modal fade" id="modalPadrao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Sobre esse projetinho</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="criarPessoa">
+                    <details>
+                        <summary class="titulos">
+                            Criar conexão com banco de dados
+                        </summary>
+                        <p>
+                        <pre class="criarPessoa1">
+    <code>
+    const { Sequelize } = require('sequelize')
+    
+    const sequelize = new Sequelize('nomedobanco', 'root', 'password', {
+        host: 'localhost',
+        dialect: 'mysql', 
+    })
+    
+    
+    module.exports = sequelize
+    </code>
+                </pre>
+                        </p>
+                        <span>Dialect é a propriedade para usar o tipo de banco se é Mysql, mongodb ou outros</span>
+                    </details>
                 </div>
-                <div class="modal-body">
-                    Esse projeto é apenas uma agenda para memorizar funções, métodos e libs dos Cursos de NodeJS
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <div class="criarPessoa">
+                    <details>
+                        <summary class="titulos">
+                            Função de inserir dados no banco
+                        </summary>
+                        <p>
+                        <pre class="criarPessoa1">
+    <code>
+    function criarPessoa() {
+    const pessoas = [
+    {},
+    {}
+    ]
+    Pessoa.bulkCreate(pessoas).then(Pessoa => console.log(Pessoa))
+    }
+    criarPessoa();
+    </code>
+                </pre>
+                        </p>
+                        <span class="criarPessoa1">Usa-se o método bulkCreate para criar de uma vez vários objetos e
+                            enviar
+                            para o
+                            banco</span>
+                    </details>
                 </div>
             </div>
-        </div>
-    </div>
+
+            <div class="col-sm-6">
+                <div class="criarPessoa">
+                    <details>
+                        <summary class="titulos">
+                            Função de Deletar dados no banco
+                        </summary>
+                        <p>
+                        <pre class="criarPessoa1">
+    <code>
+    function deletePessoa(id) {
+        Pessoa.destroy({
+            where: {
+                id: id
+            }
+        }).then(Pessoa => console.log(Pessoa))
+    }
+    // deletePessoa(8);
+    </code>
+                </pre>
+                        </p>
+                    </details>
+                </div>
+
+                <div class="criarPessoa">
+                    <details>
+                        <summary class="titulos">
+                            Função de atualizar dados no banco
+                        </summary>
+                        <p>
+                        <pre class="criarPessoa1">
+    <code>
+    function updatePessoa(id) {
+        Pessoa.update({
+            nome: 'Victor'
+        }, {
+            where: {
+                id: id
+            }
+        }).then(Pessoa => console.log(Pessoa))
+    }
+    </code>
+                </pre>
+                        </p>
+                    </details>
+
+                </div>
+                <!--Comentário do modal-->
+                <div class="modal fade" id="modalPadrao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Sobre esse projetinho</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Esse projeto é apenas uma agenda para memorizar funções, métodos e libs dos Cursos de
+                                NodeJS
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 </body>
 
 </html>
