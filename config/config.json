@@ -14,10 +14,10 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "sql10508536",
-    "password": "nP3Ii3theN",
-    "database": "sql10508536",
-    "host": "sql10.freemysqlhosting.net",
+    "username": "memorizeadmin",
+    "password": "82384580",
+    "database": "memorize",
+    "host": "172.31.0.0/16",
     "dialect": "mysql"
   }
 }
