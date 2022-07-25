@@ -2,7 +2,7 @@ const { Sequelize } = require('sequelize')
 
 const sequelize = new Sequelize('memorizar', 'root', '82384580', {
     host: 'localhost',
-    dialect: 'postgres'
+    dialect: 'mysql'
 })
 // try {
 //     sequelize.authenticate()
