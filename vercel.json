@@ -8,8 +8,20 @@
     ],
     "routes": [
         {
-            "src": "/(.*)",
-            "dest": "/"
+            "src": "/",
+            "dest": "/routes/index.js"
+        },
+        {
+            "functions": {
+                "routes/test.js": {
+                    "memory": 3008,
+                    "maxDuration": 30
+                },
+                "routes/*.js": {
+                    "memory": 3008,
+                    "maxDuration": 30
+                }
+            }
         }
     ]
 }
