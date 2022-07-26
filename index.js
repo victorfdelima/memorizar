@@ -9,6 +9,14 @@ const router = require('./routes')
 const app = express();
 
 
+function configurar() {
+    app.use('/media', express.static(__dirname + '/media'));
+    app.use(express.static(__dirname + '/public'));
+    app.use(express.static(__dirname + '/Views'));
+};
+
+configurar()
+
 app.use(express.urlencoded({
     extended: true,
 }))
